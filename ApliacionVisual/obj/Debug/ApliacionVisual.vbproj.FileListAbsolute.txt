@@ -1,0 +1,12 @@
+C:\Users\gemrx\source\repos\ApliacionVisual\ApliacionVisual\bin\Debug\ApliacionVisual.exe.config
+C:\Users\gemrx\source\repos\ApliacionVisual\ApliacionVisual\bin\Debug\ApliacionVisual.exe
+C:\Users\gemrx\source\repos\ApliacionVisual\ApliacionVisual\bin\Debug\ApliacionVisual.pdb
+C:\Users\gemrx\source\repos\ApliacionVisual\ApliacionVisual\bin\Debug\ApliacionVisual.xml
+C:\Users\gemrx\source\repos\ApliacionVisual\ApliacionVisual\obj\Debug\ApliacionVisual.vbproj.AssemblyReference.cache
+C:\Users\gemrx\source\repos\ApliacionVisual\ApliacionVisual\obj\Debug\ApliacionVisual.Form1.resources
+C:\Users\gemrx\source\repos\ApliacionVisual\ApliacionVisual\obj\Debug\ApliacionVisual.Resources.resources
+C:\Users\gemrx\source\repos\ApliacionVisual\ApliacionVisual\obj\Debug\ApliacionVisual.vbproj.GenerateResource.cache
+C:\Users\gemrx\source\repos\ApliacionVisual\ApliacionVisual\obj\Debug\ApliacionVisual.vbproj.CoreCompileInputs.cache
+C:\Users\gemrx\source\repos\ApliacionVisual\ApliacionVisual\obj\Debug\ApliacionVisual.exe
+C:\Users\gemrx\source\repos\ApliacionVisual\ApliacionVisual\obj\Debug\ApliacionVisual.xml
+C:\Users\gemrx\source\repos\ApliacionVisual\ApliacionVisual\obj\Debug\ApliacionVisual.pdb
