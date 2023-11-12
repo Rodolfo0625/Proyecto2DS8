@@ -325,4 +325,32 @@
             End If
         End If
     End Sub
+
+    Private Sub Label14_Click(sender As Object, e As EventArgs) Handles Label14.Click
+
+    End Sub
+
+    Private Sub tbSueldoBruto_TextChanged(sender As Object, e As EventArgs) Handles tbSueldoBruto.TextChanged
+
+    End Sub
+
+    Private Sub Label20_Click(sender As Object, e As EventArgs) Handles Label20.Click
+
+    End Sub
+
+    Private Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Label21_Click(sender As Object, e As EventArgs) Handles Label21.Click
+
+    End Sub
+
+    Private Sub tbTomo_TextChanged(sender As Object, e As EventArgs) Handles tbTomo.TextChanged
+
+    End Sub
+
+    Private Sub cmbPrefijo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbPrefijo.SelectedIndexChanged
+
+    End Sub
 End Class
