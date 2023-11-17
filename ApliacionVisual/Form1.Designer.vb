@@ -92,7 +92,7 @@ Partial Class Form1
         Me.cmbPrefijo.Location = New System.Drawing.Point(101, 11)
         Me.cmbPrefijo.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.cmbPrefijo.Name = "cmbPrefijo"
-        Me.cmbPrefijo.Size = New System.Drawing.Size(46, 24)
+        Me.cmbPrefijo.Size = New System.Drawing.Size(46, 21)
         Me.cmbPrefijo.TabIndex = 0
         '
         'Label1
@@ -102,7 +102,7 @@ Partial Class Form1
         Me.Label1.Location = New System.Drawing.Point(12, 18)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(50, 16)
+        Me.Label1.Size = New System.Drawing.Size(40, 13)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Cedula"
         '
@@ -113,7 +113,7 @@ Partial Class Form1
         Me.Label2.Location = New System.Drawing.Point(757, 99)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(0, 16)
+        Me.Label2.Size = New System.Drawing.Size(0, 13)
         Me.Label2.TabIndex = 2
         '
         'tbTomo
@@ -122,7 +122,7 @@ Partial Class Form1
         Me.tbTomo.Location = New System.Drawing.Point(166, 12)
         Me.tbTomo.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.tbTomo.Name = "tbTomo"
-        Me.tbTomo.Size = New System.Drawing.Size(99, 22)
+        Me.tbTomo.Size = New System.Drawing.Size(99, 19)
         Me.tbTomo.TabIndex = 3
         '
         'TextBox2
@@ -131,7 +131,7 @@ Partial Class Form1
         Me.TextBox2.Location = New System.Drawing.Point(404, 35)
         Me.TextBox2.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(2, 22)
+        Me.TextBox2.Size = New System.Drawing.Size(2, 19)
         Me.TextBox2.TabIndex = 5
         '
         'Label3
@@ -141,7 +141,7 @@ Partial Class Form1
         Me.Label3.Location = New System.Drawing.Point(468, 39)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(0, 16)
+        Me.Label3.Size = New System.Drawing.Size(0, 13)
         Me.Label3.TabIndex = 4
         '
         'Label4
@@ -151,7 +151,7 @@ Partial Class Form1
         Me.Label4.Location = New System.Drawing.Point(12, 159)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(56, 16)
+        Me.Label4.Size = New System.Drawing.Size(44, 13)
         Me.Label4.TabIndex = 6
         Me.Label4.Text = "Nombre"
         '
@@ -161,7 +161,7 @@ Partial Class Form1
         Me.tbNombre2.Location = New System.Drawing.Point(440, 156)
         Me.tbNombre2.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.tbNombre2.Name = "tbNombre2"
-        Me.tbNombre2.Size = New System.Drawing.Size(175, 22)
+        Me.tbNombre2.Size = New System.Drawing.Size(175, 19)
         Me.tbNombre2.TabIndex = 9
         '
         'Label5
@@ -171,7 +171,7 @@ Partial Class Form1
         Me.Label5.Location = New System.Drawing.Point(314, 162)
         Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(114, 16)
+        Me.Label5.Size = New System.Drawing.Size(90, 13)
         Me.Label5.TabIndex = 8
         Me.Label5.Text = "Segundo Nombre"
         '
@@ -182,7 +182,7 @@ Partial Class Form1
         Me.Label6.Location = New System.Drawing.Point(12, 210)
         Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(57, 16)
+        Me.Label6.Size = New System.Drawing.Size(44, 13)
         Me.Label6.TabIndex = 10
         Me.Label6.Text = "Apellido"
         '
@@ -193,7 +193,7 @@ Partial Class Form1
         Me.Label7.Location = New System.Drawing.Point(314, 213)
         Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(115, 16)
+        Me.Label7.Size = New System.Drawing.Size(90, 13)
         Me.Label7.TabIndex = 12
         Me.Label7.Text = "Segundo Apellido"
         '
@@ -204,7 +204,7 @@ Partial Class Form1
         Me.Label8.Location = New System.Drawing.Point(650, 213)
         Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(127, 16)
+        Me.Label8.Size = New System.Drawing.Size(98, 13)
         Me.Label8.TabIndex = 14
         Me.Label8.Text = "Apellido de Casada"
         '
@@ -214,7 +214,7 @@ Partial Class Form1
         Me.tbHorasTrabajadas.Location = New System.Drawing.Point(191, 305)
         Me.tbHorasTrabajadas.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.tbHorasTrabajadas.Name = "tbHorasTrabajadas"
-        Me.tbHorasTrabajadas.Size = New System.Drawing.Size(120, 22)
+        Me.tbHorasTrabajadas.Size = New System.Drawing.Size(120, 19)
         Me.tbHorasTrabajadas.TabIndex = 17
         '
         'Label9
@@ -224,7 +224,7 @@ Partial Class Form1
         Me.Label9.Location = New System.Drawing.Point(19, 312)
         Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(118, 16)
+        Me.Label9.Size = New System.Drawing.Size(91, 13)
         Me.Label9.TabIndex = 16
         Me.Label9.Text = "Horas Trabajadas"
         '
@@ -235,7 +235,7 @@ Partial Class Form1
         Me.Label10.Location = New System.Drawing.Point(19, 360)
         Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(94, 16)
+        Me.Label10.Size = New System.Drawing.Size(76, 13)
         Me.Label10.TabIndex = 18
         Me.Label10.Text = "Horas Extras 1"
         '
@@ -245,7 +245,7 @@ Partial Class Form1
         Me.tbDescuento1.Location = New System.Drawing.Point(188, 614)
         Me.tbDescuento1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.tbDescuento1.Name = "tbDescuento1"
-        Me.tbDescuento1.Size = New System.Drawing.Size(120, 22)
+        Me.tbDescuento1.Size = New System.Drawing.Size(120, 19)
         Me.tbDescuento1.TabIndex = 21
         '
         'Label11
@@ -255,7 +255,7 @@ Partial Class Form1
         Me.Label11.Location = New System.Drawing.Point(19, 614)
         Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(153, 16)
+        Me.Label11.Size = New System.Drawing.Size(121, 13)
         Me.Label11.TabIndex = 20
         Me.Label11.Text = "Descuentos Adicionales"
         '
@@ -265,7 +265,7 @@ Partial Class Form1
         Me.tbDescuento2.Location = New System.Drawing.Point(188, 651)
         Me.tbDescuento2.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.tbDescuento2.Name = "tbDescuento2"
-        Me.tbDescuento2.Size = New System.Drawing.Size(120, 22)
+        Me.tbDescuento2.Size = New System.Drawing.Size(120, 19)
         Me.tbDescuento2.TabIndex = 23
         '
         'Label12
@@ -275,7 +275,7 @@ Partial Class Form1
         Me.Label12.Location = New System.Drawing.Point(201, 746)
         Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(0, 16)
+        Me.Label12.Size = New System.Drawing.Size(0, 13)
         Me.Label12.TabIndex = 22
         '
         'tbDescuento3
@@ -284,7 +284,7 @@ Partial Class Form1
         Me.tbDescuento3.Location = New System.Drawing.Point(188, 697)
         Me.tbDescuento3.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.tbDescuento3.Name = "tbDescuento3"
-        Me.tbDescuento3.Size = New System.Drawing.Size(120, 22)
+        Me.tbDescuento3.Size = New System.Drawing.Size(120, 19)
         Me.tbDescuento3.TabIndex = 25
         '
         'Label13
@@ -294,27 +294,27 @@ Partial Class Form1
         Me.Label13.Location = New System.Drawing.Point(195, 651)
         Me.Label13.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(0, 16)
+        Me.Label13.Size = New System.Drawing.Size(0, 13)
         Me.Label13.TabIndex = 24
         '
         'tbSueldoBruto
         '
         Me.tbSueldoBruto.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbSueldoBruto.Location = New System.Drawing.Point(1158, 375)
+        Me.tbSueldoBruto.Location = New System.Drawing.Point(1099, 372)
         Me.tbSueldoBruto.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.tbSueldoBruto.Name = "tbSueldoBruto"
         Me.tbSueldoBruto.ReadOnly = True
-        Me.tbSueldoBruto.Size = New System.Drawing.Size(120, 22)
+        Me.tbSueldoBruto.Size = New System.Drawing.Size(120, 19)
         Me.tbSueldoBruto.TabIndex = 30
         '
         'Label14
         '
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(991, 380)
+        Me.Label14.Location = New System.Drawing.Point(958, 375)
         Me.Label14.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(84, 16)
+        Me.Label14.Size = New System.Drawing.Size(68, 13)
         Me.Label14.TabIndex = 31
         Me.Label14.Text = "Sueldo Bruto"
         '
@@ -322,84 +322,84 @@ Partial Class Form1
         '
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(991, 412)
+        Me.Label15.Location = New System.Drawing.Point(958, 409)
         Me.Label15.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(92, 16)
+        Me.Label15.Size = New System.Drawing.Size(73, 13)
         Me.Label15.TabIndex = 33
         Me.Label15.Text = "Seguro Social"
         '
         'tbSeguroSocial
         '
         Me.tbSeguroSocial.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbSeguroSocial.Location = New System.Drawing.Point(1158, 406)
+        Me.tbSeguroSocial.Location = New System.Drawing.Point(1099, 409)
         Me.tbSeguroSocial.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.tbSeguroSocial.Name = "tbSeguroSocial"
         Me.tbSeguroSocial.ReadOnly = True
-        Me.tbSeguroSocial.Size = New System.Drawing.Size(120, 22)
+        Me.tbSeguroSocial.Size = New System.Drawing.Size(120, 19)
         Me.tbSeguroSocial.TabIndex = 32
         '
         'Label16
         '
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(991, 443)
+        Me.Label16.Location = New System.Drawing.Point(958, 443)
         Me.Label16.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(114, 16)
+        Me.Label16.Size = New System.Drawing.Size(92, 13)
         Me.Label16.TabIndex = 35
         Me.Label16.Text = "Seguro Educativo"
         '
         'tbSeguroEducativo
         '
         Me.tbSeguroEducativo.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbSeguroEducativo.Location = New System.Drawing.Point(1158, 440)
+        Me.tbSeguroEducativo.Location = New System.Drawing.Point(1099, 443)
         Me.tbSeguroEducativo.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.tbSeguroEducativo.Name = "tbSeguroEducativo"
         Me.tbSeguroEducativo.ReadOnly = True
-        Me.tbSeguroEducativo.Size = New System.Drawing.Size(120, 22)
+        Me.tbSeguroEducativo.Size = New System.Drawing.Size(120, 19)
         Me.tbSeguroEducativo.TabIndex = 34
         '
         'Label17
         '
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(991, 479)
+        Me.Label17.Location = New System.Drawing.Point(958, 479)
         Me.Label17.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(159, 16)
+        Me.Label17.Size = New System.Drawing.Size(128, 13)
         Me.Label17.TabIndex = 37
         Me.Label17.Text = "Impuesto Sobre La Renta"
         '
         'tbImpuestoRenta
         '
         Me.tbImpuestoRenta.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbImpuestoRenta.Location = New System.Drawing.Point(1158, 473)
+        Me.tbImpuestoRenta.Location = New System.Drawing.Point(1099, 473)
         Me.tbImpuestoRenta.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.tbImpuestoRenta.Name = "tbImpuestoRenta"
         Me.tbImpuestoRenta.ReadOnly = True
-        Me.tbImpuestoRenta.Size = New System.Drawing.Size(120, 22)
+        Me.tbImpuestoRenta.Size = New System.Drawing.Size(120, 19)
         Me.tbImpuestoRenta.TabIndex = 36
         '
         'Label18
         '
         Me.Label18.AutoSize = True
         Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(991, 514)
+        Me.Label18.Location = New System.Drawing.Point(958, 508)
         Me.Label18.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(82, 16)
+        Me.Label18.Size = New System.Drawing.Size(66, 13)
         Me.Label18.TabIndex = 39
         Me.Label18.Text = "Sueldo Neto"
         '
         'tbSueldoNeto
         '
         Me.tbSueldoNeto.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbSueldoNeto.Location = New System.Drawing.Point(1158, 508)
+        Me.tbSueldoNeto.Location = New System.Drawing.Point(1099, 508)
         Me.tbSueldoNeto.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.tbSueldoNeto.Name = "tbSueldoNeto"
         Me.tbSueldoNeto.ReadOnly = True
-        Me.tbSueldoNeto.Size = New System.Drawing.Size(120, 22)
+        Me.tbSueldoNeto.Size = New System.Drawing.Size(120, 19)
         Me.tbSueldoNeto.TabIndex = 38
         '
         'tbSalarioHora
@@ -408,7 +408,7 @@ Partial Class Form1
         Me.tbSalarioHora.Location = New System.Drawing.Point(191, 261)
         Me.tbSalarioHora.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.tbSalarioHora.Name = "tbSalarioHora"
-        Me.tbSalarioHora.Size = New System.Drawing.Size(120, 22)
+        Me.tbSalarioHora.Size = New System.Drawing.Size(120, 19)
         Me.tbSalarioHora.TabIndex = 41
         '
         'Label19
@@ -418,7 +418,7 @@ Partial Class Form1
         Me.Label19.Location = New System.Drawing.Point(19, 269)
         Me.Label19.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(107, 16)
+        Me.Label19.Size = New System.Drawing.Size(84, 13)
         Me.Label19.TabIndex = 40
         Me.Label19.Text = "Salario Por Hora"
         '
@@ -429,7 +429,7 @@ Partial Class Form1
         Me.Label20.Location = New System.Drawing.Point(990, 398)
         Me.Label20.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(0, 16)
+        Me.Label20.Size = New System.Drawing.Size(0, 13)
         Me.Label20.TabIndex = 42
         '
         'Label21
@@ -439,7 +439,7 @@ Partial Class Form1
         Me.Label21.Location = New System.Drawing.Point(12, 66)
         Me.Label21.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(52, 16)
+        Me.Label21.Size = New System.Drawing.Size(42, 13)
         Me.Label21.TabIndex = 45
         Me.Label21.Text = "Genero"
         '
@@ -452,7 +452,7 @@ Partial Class Form1
         Me.cmbGenero.Location = New System.Drawing.Point(101, 59)
         Me.cmbGenero.Margin = New System.Windows.Forms.Padding(2)
         Me.cmbGenero.Name = "cmbGenero"
-        Me.cmbGenero.Size = New System.Drawing.Size(106, 24)
+        Me.cmbGenero.Size = New System.Drawing.Size(106, 21)
         Me.cmbGenero.TabIndex = 47
         '
         'Label22
@@ -462,7 +462,7 @@ Partial Class Form1
         Me.Label22.Location = New System.Drawing.Point(19, 438)
         Me.Label22.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(94, 16)
+        Me.Label22.Size = New System.Drawing.Size(76, 13)
         Me.Label22.TabIndex = 48
         Me.Label22.Text = "Horas Extras 2"
         '
@@ -473,7 +473,7 @@ Partial Class Form1
         Me.Label23.Location = New System.Drawing.Point(19, 521)
         Me.Label23.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(94, 16)
+        Me.Label23.Size = New System.Drawing.Size(76, 13)
         Me.Label23.TabIndex = 50
         Me.Label23.Text = "Horas Extras 3"
         '
@@ -483,7 +483,7 @@ Partial Class Form1
         Me.tbNombre1.Location = New System.Drawing.Point(101, 156)
         Me.tbNombre1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.tbNombre1.Name = "tbNombre1"
-        Me.tbNombre1.Size = New System.Drawing.Size(175, 22)
+        Me.tbNombre1.Size = New System.Drawing.Size(175, 19)
         Me.tbNombre1.TabIndex = 52
         '
         'tbAsiento
@@ -492,7 +492,7 @@ Partial Class Form1
         Me.tbAsiento.Location = New System.Drawing.Point(285, 13)
         Me.tbAsiento.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.tbAsiento.Name = "tbAsiento"
-        Me.tbAsiento.Size = New System.Drawing.Size(99, 22)
+        Me.tbAsiento.Size = New System.Drawing.Size(99, 19)
         Me.tbAsiento.TabIndex = 53
         '
         'tbApellido1
@@ -501,7 +501,7 @@ Partial Class Form1
         Me.tbApellido1.Location = New System.Drawing.Point(101, 207)
         Me.tbApellido1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.tbApellido1.Name = "tbApellido1"
-        Me.tbApellido1.Size = New System.Drawing.Size(175, 22)
+        Me.tbApellido1.Size = New System.Drawing.Size(175, 19)
         Me.tbApellido1.TabIndex = 54
         '
         'tbApellido2
@@ -510,7 +510,7 @@ Partial Class Form1
         Me.tbApellido2.Location = New System.Drawing.Point(440, 207)
         Me.tbApellido2.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.tbApellido2.Name = "tbApellido2"
-        Me.tbApellido2.Size = New System.Drawing.Size(175, 22)
+        Me.tbApellido2.Size = New System.Drawing.Size(175, 19)
         Me.tbApellido2.TabIndex = 55
         '
         'tbApellidoCasada
@@ -519,7 +519,7 @@ Partial Class Form1
         Me.tbApellidoCasada.Location = New System.Drawing.Point(782, 207)
         Me.tbApellidoCasada.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.tbApellidoCasada.Name = "tbApellidoCasada"
-        Me.tbApellidoCasada.Size = New System.Drawing.Size(175, 22)
+        Me.tbApellidoCasada.Size = New System.Drawing.Size(175, 19)
         Me.tbApellidoCasada.TabIndex = 56
         '
         'tbHorasExtra3
@@ -529,7 +529,7 @@ Partial Class Form1
         Me.tbHorasExtra3.Location = New System.Drawing.Point(188, 543)
         Me.tbHorasExtra3.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.tbHorasExtra3.Name = "tbHorasExtra3"
-        Me.tbHorasExtra3.Size = New System.Drawing.Size(120, 27)
+        Me.tbHorasExtra3.Size = New System.Drawing.Size(120, 23)
         Me.tbHorasExtra3.TabIndex = 57
         '
         'tbHorasExtra1
@@ -539,7 +539,7 @@ Partial Class Form1
         Me.tbHorasExtra1.Location = New System.Drawing.Point(188, 379)
         Me.tbHorasExtra1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.tbHorasExtra1.Name = "tbHorasExtra1"
-        Me.tbHorasExtra1.Size = New System.Drawing.Size(120, 22)
+        Me.tbHorasExtra1.Size = New System.Drawing.Size(120, 19)
         Me.tbHorasExtra1.TabIndex = 59
         '
         'cmbTipoHorasExtra1
@@ -557,7 +557,7 @@ Partial Class Form1
         Me.cmbTipoHorasExtra1.Location = New System.Drawing.Point(188, 352)
         Me.cmbTipoHorasExtra1.Margin = New System.Windows.Forms.Padding(2)
         Me.cmbTipoHorasExtra1.Name = "cmbTipoHorasExtra1"
-        Me.cmbTipoHorasExtra1.Size = New System.Drawing.Size(738, 24)
+        Me.cmbTipoHorasExtra1.Size = New System.Drawing.Size(738, 21)
         Me.cmbTipoHorasExtra1.TabIndex = 58
         '
         'tbHorasExtra2
@@ -567,7 +567,7 @@ Partial Class Form1
         Me.tbHorasExtra2.Location = New System.Drawing.Point(188, 462)
         Me.tbHorasExtra2.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.tbHorasExtra2.Name = "tbHorasExtra2"
-        Me.tbHorasExtra2.Size = New System.Drawing.Size(120, 22)
+        Me.tbHorasExtra2.Size = New System.Drawing.Size(120, 19)
         Me.tbHorasExtra2.TabIndex = 61
         '
         'cmbTipoHorasExtra2
@@ -585,7 +585,7 @@ Partial Class Form1
         Me.cmbTipoHorasExtra2.Location = New System.Drawing.Point(188, 433)
         Me.cmbTipoHorasExtra2.Margin = New System.Windows.Forms.Padding(2)
         Me.cmbTipoHorasExtra2.Name = "cmbTipoHorasExtra2"
-        Me.cmbTipoHorasExtra2.Size = New System.Drawing.Size(738, 24)
+        Me.cmbTipoHorasExtra2.Size = New System.Drawing.Size(738, 21)
         Me.cmbTipoHorasExtra2.TabIndex = 62
         '
         'cmbTipoHorasExtra3
@@ -603,7 +603,7 @@ Partial Class Form1
         Me.cmbTipoHorasExtra3.Location = New System.Drawing.Point(188, 514)
         Me.cmbTipoHorasExtra3.Margin = New System.Windows.Forms.Padding(2)
         Me.cmbTipoHorasExtra3.Name = "cmbTipoHorasExtra3"
-        Me.cmbTipoHorasExtra3.Size = New System.Drawing.Size(738, 24)
+        Me.cmbTipoHorasExtra3.Size = New System.Drawing.Size(738, 21)
         Me.cmbTipoHorasExtra3.TabIndex = 63
         '
         'cmbEstadoCivil
@@ -615,7 +615,7 @@ Partial Class Form1
         Me.cmbEstadoCivil.Location = New System.Drawing.Point(101, 107)
         Me.cmbEstadoCivil.Margin = New System.Windows.Forms.Padding(2)
         Me.cmbEstadoCivil.Name = "cmbEstadoCivil"
-        Me.cmbEstadoCivil.Size = New System.Drawing.Size(106, 24)
+        Me.cmbEstadoCivil.Size = New System.Drawing.Size(106, 21)
         Me.cmbEstadoCivil.TabIndex = 65
         '
         'Label24
@@ -625,7 +625,7 @@ Partial Class Form1
         Me.Label24.Location = New System.Drawing.Point(12, 113)
         Me.Label24.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(78, 16)
+        Me.Label24.Size = New System.Drawing.Size(62, 13)
         Me.Label24.TabIndex = 64
         Me.Label24.Text = "Estado Civil"
         '
@@ -633,63 +633,63 @@ Partial Class Form1
         '
         Me.Label25.AutoSize = True
         Me.Label25.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.Location = New System.Drawing.Point(991, 346)
+        Me.Label25.Location = New System.Drawing.Point(940, 346)
         Me.Label25.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(149, 16)
+        Me.Label25.Size = New System.Drawing.Size(119, 13)
         Me.Label25.TabIndex = 69
         Me.Label25.Text = "Pago de Horas Extras 3"
         '
         'tbMontoHorasExtras3
         '
         Me.tbMontoHorasExtras3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbMontoHorasExtras3.Location = New System.Drawing.Point(1158, 340)
+        Me.tbMontoHorasExtras3.Location = New System.Drawing.Point(1099, 340)
         Me.tbMontoHorasExtras3.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.tbMontoHorasExtras3.Name = "tbMontoHorasExtras3"
         Me.tbMontoHorasExtras3.ReadOnly = True
-        Me.tbMontoHorasExtras3.Size = New System.Drawing.Size(120, 22)
+        Me.tbMontoHorasExtras3.Size = New System.Drawing.Size(120, 19)
         Me.tbMontoHorasExtras3.TabIndex = 68
         '
         'Label26
         '
         Me.Label26.AutoSize = True
         Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label26.Location = New System.Drawing.Point(991, 311)
+        Me.Label26.Location = New System.Drawing.Point(944, 312)
         Me.Label26.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(141, 16)
+        Me.Label26.Size = New System.Drawing.Size(113, 13)
         Me.Label26.TabIndex = 67
         Me.Label26.Text = "Pao de Horas Extras 2"
         '
         'tbMontoHorasExtras2
         '
         Me.tbMontoHorasExtras2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbMontoHorasExtras2.Location = New System.Drawing.Point(1158, 305)
+        Me.tbMontoHorasExtras2.Location = New System.Drawing.Point(1099, 305)
         Me.tbMontoHorasExtras2.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.tbMontoHorasExtras2.Name = "tbMontoHorasExtras2"
         Me.tbMontoHorasExtras2.ReadOnly = True
-        Me.tbMontoHorasExtras2.Size = New System.Drawing.Size(120, 22)
+        Me.tbMontoHorasExtras2.Size = New System.Drawing.Size(120, 19)
         Me.tbMontoHorasExtras2.TabIndex = 66
         '
         'Label28
         '
         Me.Label28.AutoSize = True
         Me.Label28.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label28.Location = New System.Drawing.Point(991, 275)
+        Me.Label28.Location = New System.Drawing.Point(945, 275)
         Me.Label28.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(149, 16)
+        Me.Label28.Size = New System.Drawing.Size(119, 13)
         Me.Label28.TabIndex = 71
         Me.Label28.Text = "Pago de Horas Extras 1"
         '
         'tbMontoHorasExtras1
         '
         Me.tbMontoHorasExtras1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbMontoHorasExtras1.Location = New System.Drawing.Point(1158, 269)
+        Me.tbMontoHorasExtras1.Location = New System.Drawing.Point(1099, 272)
         Me.tbMontoHorasExtras1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.tbMontoHorasExtras1.Name = "tbMontoHorasExtras1"
         Me.tbMontoHorasExtras1.ReadOnly = True
-        Me.tbMontoHorasExtras1.Size = New System.Drawing.Size(120, 22)
+        Me.tbMontoHorasExtras1.Size = New System.Drawing.Size(120, 19)
         Me.tbMontoHorasExtras1.TabIndex = 70
         '
         'Button1
@@ -705,10 +705,10 @@ Partial Class Form1
         '
         'Form1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.HighlightText
-        Me.ClientSize = New System.Drawing.Size(1378, 781)
+        Me.ClientSize = New System.Drawing.Size(1370, 749)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label28)
         Me.Controls.Add(Me.tbMontoHorasExtras1)
