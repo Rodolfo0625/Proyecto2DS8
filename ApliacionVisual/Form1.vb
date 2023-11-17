@@ -120,6 +120,9 @@
                 tbSeguroEducativo.Text = empleado.seguro_educativo
                 tbImpuestoRenta.Text = empleado.impuesto_renta
                 tbSueldoNeto.Text = empleado.sneto
+
+                'Registrar datos del empleado
+                empleado.RegistrarDatos()
             End If
         End If
     End Sub

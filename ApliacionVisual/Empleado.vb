@@ -155,6 +155,13 @@
         sneto = sbruto - (seguro_social + seguro_educativo + impuesto_renta + descuento1 + descuento2 + descuento3)
         sneto = Math.Round(sneto)
     End Sub
+
+
+
+    Public Sub RegistrarDatos()
+        'Logica para registrar los datos en la base de datos
+    End Sub
+
 End Class
 
 
