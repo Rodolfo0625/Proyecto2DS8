@@ -191,7 +191,7 @@ Public Class Empleado
         Dim insertar As String = "INSERT INTO generales (prefijo, tomo, asiento, genero, cedula, nombre1, nombre2, apellido1, apellido2, estado_civil, apellido_casada, usa_apellido_casada, htrabajadas, shora, thextra1, hextra1, mhextra1, thextra2, hextra2, mhextra2, thextra3, hextra3, mhextra3, sbruto, seguro_social, seguro_educativo, impuesto_renta, descuento1, descuento2, descuento3, sneto) " &
     "VALUES (@prefijo, @tomo, @asiento, @genero, @cedula, @nombre1, @nombre2, @apellido1, @apellido2, @estado_civil, @apellido_casada, @usa_apellido_casada, @htrabajadas, @shora, @thextra1, @hextra1, @mhextra1, @thextra2, @hextra2, @mhextra2, @thextra3, @hextra3, @mhextra3, @sbruto, @seguro_social, @seguro_educativo, @impuesto_renta, @descuento1, @descuento2, @descuento3, @sneto)"
 
-        Using conn As New MySqlConnection("server=localhost;userid=root;database=d8_modificado")
+        Using conn As New MySqlConnection("server=localhost;userid=d82023;password=ds8;database=d8_modificado")
             Try
                 conn.Open()
 
