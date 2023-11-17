@@ -1,4 +1,6 @@
-﻿Public Class Empleado
+﻿Imports MySql.Data.MySqlClient
+
+Public Class Empleado
     Public prefijo As String
     Public tomo As String
     Public asiento As String
@@ -186,6 +188,57 @@
 
     Public Sub RegistrarDatos()
         'Logica para registrar los datos en la base de datos
+        Dim insertar As String
+        insertar = "INSERT INTO nombre_de_tu_tabla (prefijo, tomo, asiento, genero, cedula, nombre1, nombre2, apellido1, apellido2, estado_civil, apellido_casada, usa_apellido_casada, htrabajadas, shora, thextra1, hextra1, mhextra1, thextra2, hextra2, mhextra2, thextra3, hextra3, mhextra3, sbruto, seguro_social, seguro_educativo, impuesto_renta, descuento1, descuento2, descuento3, sneto) " &
+        "VALUES (@prefijo, @tomo, @asiento, @genero, @cedula, @nombre1, @nombre2, @apellido1, @apellido2, @estado_civil, @apellido_casada, @usa_apellido_casada, @htrabajadas, @shora, @thextra1, @hextra1, @mhextra1, @thextra2, @hextra2, @mhextra2, @thextra3, @hextra3, @mhextra3, @sbruto, @seguro_social, @seguro_educativo, @impuesto_renta, @descuento1, @descuento2, @descuento3, @sneto)"
+
+        Using conn As New MySqlConnection("server=localhost;userid=root;database=d8")
+            Try
+                conn.Open()
+
+                Using command As New MySqlCommand(insertar, conn)
+                    ' Asignar valores a los parámetros usando la instancia de Empleado
+                    command.Parameters.AddWithValue("@prefijo", prefijo)
+                    command.Parameters.AddWithValue("@tomo", tomo)
+                    command.Parameters.AddWithValue("@asiento", asiento)
+                    command.Parameters.AddWithValue("@genero", genero)
+                    command.Parameters.AddWithValue("@cedula", cedula)
+                    command.Parameters.AddWithValue("@nombre1", nombre1)
+                    command.Parameters.AddWithValue("@nombre2", nombre2)
+                    command.Parameters.AddWithValue("@apellido1", apellido1)
+                    command.Parameters.AddWithValue("@apellido2", apellido2)
+                    command.Parameters.AddWithValue("@estado_civil", estado_civil)
+                    command.Parameters.AddWithValue("@apellido_casada", apellido_casada)
+                    command.Parameters.AddWithValue("@usa_apellido_casada", usa_apellido_casada)
+                    command.Parameters.AddWithValue("@htrabajadas", htrabajadas)
+                    command.Parameters.AddWithValue("@shora", shora)
+                    command.Parameters.AddWithValue("@thextra1", thextra1)
+                    command.Parameters.AddWithValue("@hextra1", hextra1)
+                    command.Parameters.AddWithValue("@mhextra1", mhextra1)
+                    command.Parameters.AddWithValue("@thextra2", thextra2)
+                    command.Parameters.AddWithValue("@hextra2", hextra2)
+                    command.Parameters.AddWithValue("@mhextra2", mhextra2)
+                    command.Parameters.AddWithValue("@thextra3", thextra3)
+                    command.Parameters.AddWithValue("@hextra3", hextra3)
+                    command.Parameters.AddWithValue("@mhextra3", mhextra3)
+                    command.Parameters.AddWithValue("@sbruto", sbruto)
+                    command.Parameters.AddWithValue("@seguro_social", seguro_social)
+                    command.Parameters.AddWithValue("@seguro_educativo", seguro_educativo)
+                    command.Parameters.AddWithValue("@impuesto_renta", impuesto_renta)
+                    command.Parameters.AddWithValue("@descuento1", descuento1)
+                    command.Parameters.AddWithValue("@descuento2", descuento2)
+                    command.Parameters.AddWithValue("@descuento3", descuento3)
+                    command.Parameters.AddWithValue("@sneto", sneto)
+
+                    ' Ejecutar la consulta
+                    command.ExecuteNonQuery()
+
+                    MessageBox.Show("Registro Grabado", "AVISO")
+                End Using
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+        End Using
     End Sub
 
 End Class

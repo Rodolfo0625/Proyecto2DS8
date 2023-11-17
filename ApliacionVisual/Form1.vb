@@ -1,4 +1,12 @@
-﻿Public Class Form1
+﻿Imports System.Data.SqlClient
+Imports Google.Protobuf.WellKnownTypes
+Imports System.Runtime.ConstrainedExecution
+Imports System.Security.Cryptography
+Imports MySql.Data.MySqlClient
+Imports Org.BouncyCastle.Utilities
+Imports Org.BouncyCastle.Utilities.Encoders
+
+Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.KeyPreview = True
         cmbPrefijo.SelectedIndex = 7
@@ -126,10 +134,13 @@
                 tbSueldoNeto.Text = empleado.sneto
 
                 'imprimir una lista de todos los atributos del empleado (SOLO PARA VERIFICAR)
-                'empleado.ImprimirAtributos()
+                empleado.ImprimirAtributos()
 
                 'Registrar datos del empleado
-                'empleado.RegistrarDatos()
+                empleado.RegistrarDatos()
+
+
+                '...
             End If
         End If
     End Sub
