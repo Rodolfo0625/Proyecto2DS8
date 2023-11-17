@@ -14,7 +14,6 @@
 
     Public shora As Decimal
     Public htrabajadas As Decimal
-    Public salarioBase As Decimal
 
     'Horas extras 1'
     Public thextra1 As String = ""
@@ -157,6 +156,33 @@
     End Sub
 
 
+    Public Sub ImprimirAtributos()
+        MsgBox("empleado.Prefijo: " & Me.prefijo &
+               vbCrLf & "empleado.Tomo: " & Me.tomo &
+               vbCrLf & "empleado.Asiento: " & Me.asiento &
+               vbCrLf & "empleado.Cédula: " & Me.cedula &
+               vbCrLf & "empleado.Género: " & Me.genero &
+               vbCrLf & "empleado.Nombre1: " & Me.nombre1 &
+               vbCrLf & "empleado.Nombre2: " & Me.nombre2 &
+               vbCrLf & "empleado.Apellido1: " & Me.apellido1 &
+               vbCrLf & "empleado.Apellido2: " & Me.apellido2 &
+               vbCrLf & "empleado.Estado Civil: " & Me.estado_civil &
+               vbCrLf & "empleado.Apellido Casada: " & Me.apellido_casada &
+               vbCrLf & "empleado.Usa Apellido Casada: " & Me.usa_apellido_casada &
+               vbCrLf & "empleado.S. Hora: " & Me.shora &
+               vbCrLf & "empleado.H. Trabajadas: " & Me.htrabajadas &
+               vbCrLf & "empleado.H. Extra 1: " & Me.thextra1 & " - " & Me.hextra1 & " - " & Me.mhextra1 &
+               vbCrLf & "empleado.H. Extra 2: " & Me.thextra2 & " - " & Me.hextra2 & " - " & Me.mhextra2 &
+               vbCrLf & "empleado.H. Extra 3: " & Me.thextra3 & " - " & Me.hextra3 & " - " & Me.mhextra3 &
+               vbCrLf & "empleado.Salario Bruto: " & Me.sbruto &
+               vbCrLf & "empleado.Seguro Social: " & Me.seguro_social &
+               vbCrLf & "empleado.Seguro Educativo: " & Me.seguro_educativo &
+               vbCrLf & "empleado.Impuesto Renta: " & Me.impuesto_renta &
+               vbCrLf & "empleado.Descuento 1: " & Me.descuento1 &
+               vbCrLf & "empleado.Descuento 2: " & Me.descuento2 &
+               vbCrLf & "empleado.Descuento 3: " & Me.descuento3 &
+               vbCrLf & "empleado.Salario Neto: " & Me.sneto)
+    End Sub
 
     Public Sub RegistrarDatos()
         'Logica para registrar los datos en la base de datos

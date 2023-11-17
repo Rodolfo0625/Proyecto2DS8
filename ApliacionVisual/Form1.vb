@@ -54,7 +54,11 @@
                 Dim empleado As New Empleado
 
                 'DATOS PERSONALES
-                empleado.genero = cmbGenero.SelectedText
+                empleado.prefijo = cmbPrefijo.Text
+                empleado.tomo = tbTomo.Text
+                empleado.asiento = tbAsiento.Text
+                empleado.cedula = String.Format("{0}-{1}-{2}", empleado.prefijo, empleado.tomo, empleado.asiento)
+                empleado.genero = cmbGenero.Text
                 empleado.estado_civil = cmbEstadoCivil.Text
 
                 empleado.nombre1 = tbNombre1.Text
@@ -86,13 +90,13 @@
                 If tbHorasExtra2.Text <> "" Then
                     Dim tipo As String = cmbTipoHorasExtra2.Text
                     Dim cantidad = Decimal.Parse(tbHorasExtra2.Text)
-                    empleado.AsignarHorasExtra1(tipo, cantidad)
+                    empleado.AsignarHorasExtra2(tipo, cantidad)
                 End If
 
                 If tbHorasExtra3.Text <> "" Then
                     Dim tipo As String = cmbTipoHorasExtra3.Text
                     Dim cantidad = Decimal.Parse(tbHorasExtra3.Text)
-                    empleado.AsignarHorasExtra1(tipo, cantidad)
+                    empleado.AsignarHorasExtra3(tipo, cantidad)
                 End If
 
                 'DESCUENTOS
@@ -121,8 +125,11 @@
                 tbImpuestoRenta.Text = empleado.impuesto_renta
                 tbSueldoNeto.Text = empleado.sneto
 
+                'imprimir una lista de todos los atributos del empleado (SOLO PARA VERIFICAR)
+                'empleado.ImprimirAtributos()
+
                 'Registrar datos del empleado
-                empleado.RegistrarDatos()
+                'empleado.RegistrarDatos()
             End If
         End If
     End Sub
