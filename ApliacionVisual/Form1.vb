@@ -2,6 +2,8 @@
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.KeyPreview = True
         cmbPrefijo.SelectedIndex = 7
+        cmbGenero.SelectedIndex = 0
+        cmbEstadoCivil.SelectedIndex = 0
     End Sub
 
     Public Function VerificarCampos() As Boolean
@@ -13,6 +15,12 @@
             Return False
         ElseIf tbAsiento.Text = "" Then
             MsgBox("Porfavor ingresa el tu cedula correctamenete")
+            Return False
+        ElseIf cmbGenero.Text = "" Then
+            MsgBox("Porfavor selecciona tu genero")
+            Return False
+        ElseIf cmbEstadoCivil.Text = "" Then
+            MsgBox("Porfavor selecciona tu genero")
             Return False
         ElseIf tbNombre1.Text = "" Then
             MsgBox("Porfavor ingresa tu primer nombre")
@@ -26,20 +34,29 @@
         ElseIf tbHorasTrabajadas.Text = "" Then
             MsgBox("Porfavor ingresa las horas trabajadas")
             Return False
+        ElseIf cmbTipoHorasExtra1.Text <> "" AndAlso tbHorasExtra1.Text = "" Then
+            MsgBox("Porfavor ingresa la cantidad de las horas extras 1")
+            Return False
+        ElseIf cmbTipoHorasExtra2.Text <> "" AndAlso tbHorasExtra2.Text = "" Then
+            MsgBox("Porfavor ingresa la cantidad de las horas extras 2")
+            Return False
+        ElseIf cmbTipoHorasExtra3.Text <> "" AndAlso tbHorasExtra3.Text = "" Then
+            MsgBox("Porfavor ingresa la cantidad de las horas extras 3")
+            Return False
         End If
         Return True
     End Function
 
-
     Private Sub Form1_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
         If e.KeyCode = Keys.Enter Then
-
-
 
             If VerificarCampos() Then
                 Dim empleado As New Empleado
 
-                'Datos Personales
+                'DATOS PERSONALES
+                empleado.genero = cmbGenero.SelectedText
+                empleado.estado_civil = cmbEstadoCivil.Text
+
                 empleado.nombre1 = tbNombre1.Text
                 If tbNombre2.Text <> "" Then
                     empleado.nombre2 = tbNombre2.Text
@@ -52,47 +69,57 @@
 
                 If tbApellidoCasada.Text <> "" Then
                     empleado.apellido_casada = tbApellidoCasada.Text
-                    empleado.usa_ape_casada = True
-                Else
-                    empleado.usa_ape_casada = False
+                    empleado.usa_apellido_casada = "Si"
                 End If
 
-                'Datos de salario
+                'SALARIO Y HORAS TRABJADAS
                 empleado.shora = Decimal.Parse(tbSalarioHora.Text)
                 empleado.htrabajadas = Decimal.Parse(tbHorasTrabajadas.Text)
 
-                If tbHorasExtras.Text = "" Then
-                    empleado.hextras = 0
-                Else
-                    empleado.hextras = Decimal.Parse(tbHorasExtras.Text)
+                'HORAS EXTRAS'
+                If tbHorasExtra1.Text <> "" Then
+                    Dim tipo As String = cmbTipoHorasExtra1.Text
+                    Dim cantidad = Decimal.Parse(tbHorasExtra1.Text)
+                    empleado.AsignarHorasExtra1(tipo, cantidad)
                 End If
 
-                If tbDescuentos1.Text = "" Then
-                    empleado.otros_descuentos1 = 0
-                Else
-                    empleado.otros_descuentos1 = Decimal.Parse(tbDescuentos1.Text)
+                If tbHorasExtra2.Text <> "" Then
+                    Dim tipo As String = cmbTipoHorasExtra2.Text
+                    Dim cantidad = Decimal.Parse(tbHorasExtra2.Text)
+                    empleado.AsignarHorasExtra1(tipo, cantidad)
                 End If
 
-                If tbDescuentos2.Text = "" Then
-                    empleado.otros_descuentos2 = 0
-                Else
-                    empleado.otros_descuentos2 = Decimal.Parse(tbDescuentos2.Text)
+                If tbHorasExtra3.Text <> "" Then
+                    Dim tipo As String = cmbTipoHorasExtra3.Text
+                    Dim cantidad = Decimal.Parse(tbHorasExtra3.Text)
+                    empleado.AsignarHorasExtra1(tipo, cantidad)
                 End If
 
-                If tbDescuentos3.Text = "" Then
-                    empleado.otros_descuentos3 = 0
-                Else
-                    empleado.otros_descuentos3 = Decimal.Parse(tbDescuentos3.Text)
+                'DESCUENTOS
+                If tbDescuento1.Text <> "" Then
+                    empleado.descuento1 = tbDescuento1.Text
                 End If
 
+                If tbDescuento2.Text <> "" Then
+                    empleado.descuento2 = tbDescuento2.Text
+                End If
+
+                If tbDescuento3.Text <> "" Then
+                    empleado.descuento3 = tbDescuento3.Text
+                End If
+
+                'CALCULOS FINALES'
                 empleado.CalcularSalario()
 
-                'Mostrar resultado en sus respectivos Text Box formateados a dos decimales'
-                tbSueldoBruto.Text = empleado.sbruto.ToString("F2")
-                tbSeguroSocial.Text = empleado.ssocial.ToString("F2")
-                tbSeguroEducativo.Text = empleado.seducativo.ToString("F2")
-                tbImpuestoRenta.Text = empleado.irenta.ToString("F2")
-                tbSueldoNeto.Text = empleado.sneto.ToString("F2")
+                'MOSTRAR RESULTADOS
+                tbMontoHorasExtras1.Text = empleado.mhextra1
+                tbMontoHorasExtras2.Text = empleado.mhextra2
+                tbMontoHorasExtras3.Text = empleado.mhextra3
+                tbSueldoBruto.Text = empleado.sbruto
+                tbSeguroSocial.Text = empleado.seguro_social
+                tbSeguroEducativo.Text = empleado.seguro_educativo
+                tbImpuestoRenta.Text = empleado.impuesto_renta
+                tbSueldoNeto.Text = empleado.sneto
             End If
         End If
     End Sub
@@ -129,6 +156,7 @@
             e.Handled = True
         End If
     End Sub
+
 
     Private Sub tbNombre2_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tbNombre2.KeyPress
         ' Evitar teclas que no sean letras alfabéticas, espacios, teclas de control o caracteres con tilde
@@ -217,18 +245,15 @@
         End If
     End Sub
 
-    Private Sub tbHorasExtras_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tbHorasExtras.KeyPress
-        ' Evitar teclas que no sean los digitos o las teclas de control
+    Private Sub tbHorasExtra1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tbHorasExtra1.KeyPress
+        ' Evitar teclas que no sean los digitos, el punto decimal o las teclas de control
         If Not Char.IsDigit(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) AndAlso e.KeyChar <> "." Then
-            ' Cancelar el evento de tecla presionada para evitar que se ingrese el carácter
             e.Handled = True
         End If
 
-        ' Si el primer digito es cero, evitar ingresar otro cero como segundo digito'
-        If tbHorasExtras.Text.Length = 1 AndAlso e.KeyChar = "0" Then
-            If tbHorasExtras.Text = "0" Then
-                e.Handled = True
-            End If
+        ' Evitar Ingresar 0 como primer digito'
+        If tbHorasExtra1.Text.Length = 0 AndAlso e.KeyChar = "0" Then
+            e.Handled = True
         End If
 
         ' Evitar ingresar mas de un punto decimal
@@ -237,23 +262,73 @@
         End If
 
         ' Evitar ingresar mas de dos digitos decimales'
-        If tbHorasExtras.Text.Contains(".") AndAlso Char.IsDigit(e.KeyChar) Then
-            Dim partesTexto() As String = tbHorasExtras.Text.Split(".")
+        If tbHorasExtra1.Text.Contains(".") AndAlso Char.IsDigit(e.KeyChar) Then
+            Dim partesTexto() As String = tbHorasExtra1.Text.Split(".")
             If partesTexto(1).Length = 2 Then
                 e.Handled = True
             End If
         End If
     End Sub
 
-    Private Sub tbDescuentos1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tbDescuentos1.KeyPress
+    Private Sub tbHorasExtra2_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tbHorasExtra2.KeyPress
+        ' Evitar teclas que no sean los digitos, el punto decimal o las teclas de control
+        If Not Char.IsDigit(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) AndAlso e.KeyChar <> "." Then
+            e.Handled = True
+        End If
+
+        ' Evitar Ingresar 0 como primer digito'
+        If tbHorasExtra2.Text.Length = 0 AndAlso e.KeyChar = "0" Then
+            e.Handled = True
+        End If
+
+        ' Evitar ingresar mas de un punto decimal
+        If e.KeyChar = "." AndAlso (CType(sender, TextBox).Text.Contains(".") OrElse CType(sender, TextBox).SelectionStart = 0) Then
+            e.Handled = True
+        End If
+
+        ' Evitar ingresar mas de dos digitos decimales'
+        If tbHorasExtra2.Text.Contains(".") AndAlso Char.IsDigit(e.KeyChar) Then
+            Dim partesTexto() As String = tbHorasExtra2.Text.Split(".")
+            If partesTexto(1).Length = 2 Then
+                e.Handled = True
+            End If
+        End If
+    End Sub
+
+    Private Sub tbHorasExtra3_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tbHorasExtra3.KeyPress
+        ' Evitar teclas que no sean los digitos, el punto decimal o las teclas de control
+        If Not Char.IsDigit(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) AndAlso e.KeyChar <> "." Then
+            e.Handled = True
+        End If
+
+        ' Evitar Ingresar 0 como primer digito'
+        If tbHorasExtra3.Text.Length = 0 AndAlso e.KeyChar = "0" Then
+            e.Handled = True
+        End If
+
+        ' Evitar ingresar mas de un punto decimal
+        If e.KeyChar = "." AndAlso (CType(sender, TextBox).Text.Contains(".") OrElse CType(sender, TextBox).SelectionStart = 0) Then
+            e.Handled = True
+        End If
+
+        ' Evitar ingresar mas de dos digitos decimales'
+        If tbHorasExtra3.Text.Contains(".") AndAlso Char.IsDigit(e.KeyChar) Then
+            Dim partesTexto() As String = tbHorasExtra3.Text.Split(".")
+            If partesTexto(1).Length = 2 Then
+                e.Handled = True
+            End If
+        End If
+    End Sub
+
+    Private Sub tbDescuentos1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tbDescuento1.KeyPress
         ' Evitar teclas que no sean los digitos, el punto decimal o las teclas de control
         If Not Char.IsDigit(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) AndAlso e.KeyChar <> "." Then
             e.Handled = True
         End If
 
         ' Si el primer digito es cero, evitar ingresar otro cero como segundo digito'
-        If tbDescuentos1.Text.Length = 1 AndAlso e.KeyChar = "0" Then
-            If tbDescuentos1.Text = "0" Then
+        If tbDescuento1.Text.Length = 1 AndAlso e.KeyChar = "0" Then
+            If tbDescuento1.Text = "0" Then
                 e.Handled = True
             End If
         End If
@@ -264,23 +339,23 @@
         End If
 
         ' Evitar ingresar mas de dos digitos decimales'
-        If tbDescuentos1.Text.Contains(".") AndAlso Char.IsDigit(e.KeyChar) Then
-            Dim partesTexto() As String = tbDescuentos1.Text.Split(".")
+        If tbDescuento1.Text.Contains(".") AndAlso Char.IsDigit(e.KeyChar) Then
+            Dim partesTexto() As String = tbDescuento1.Text.Split(".")
             If partesTexto(1).Length = 2 Then
                 e.Handled = True
             End If
         End If
     End Sub
 
-    Private Sub tbDescuentos2_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tbDescuentos2.KeyPress
+    Private Sub tbDescuentos2_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tbDescuento2.KeyPress
         ' Evitar teclas que no sean los digitos, el punto decimal o las teclas de control
         If Not Char.IsDigit(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) AndAlso e.KeyChar <> "." Then
             e.Handled = True
         End If
 
         ' Si el primer digito es cero, evitar ingresar otro cero como segundo digito'
-        If tbDescuentos2.Text.Length = 1 AndAlso e.KeyChar = "0" Then
-            If tbDescuentos1.Text = "0" Then
+        If tbDescuento2.Text.Length = 1 AndAlso e.KeyChar = "0" Then
+            If tbDescuento1.Text = "0" Then
                 e.Handled = True
             End If
         End If
@@ -291,23 +366,23 @@
         End If
 
         ' Evitar ingresar mas de dos digitos decimales'
-        If tbDescuentos2.Text.Contains(".") AndAlso Char.IsDigit(e.KeyChar) Then
-            Dim partesTexto() As String = tbDescuentos2.Text.Split(".")
+        If tbDescuento2.Text.Contains(".") AndAlso Char.IsDigit(e.KeyChar) Then
+            Dim partesTexto() As String = tbDescuento2.Text.Split(".")
             If partesTexto(1).Length = 2 Then
                 e.Handled = True
             End If
         End If
     End Sub
 
-    Private Sub tbDescuentos3_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tbDescuentos3.KeyPress
+    Private Sub tbDescuentos3_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tbDescuento3.KeyPress
         ' Evitar teclas que no sean los digitos, el punto decimal o las teclas de control
         If Not Char.IsDigit(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) AndAlso e.KeyChar <> "." Then
             e.Handled = True
         End If
 
         ' Si el primer digito es cero, evitar ingresar otro cero como segundo digito'
-        If tbDescuentos2.Text.Length = 1 AndAlso e.KeyChar = "0" Then
-            If tbDescuentos1.Text = "0" Then
+        If tbDescuento2.Text.Length = 1 AndAlso e.KeyChar = "0" Then
+            If tbDescuento1.Text = "0" Then
                 e.Handled = True
             End If
         End If
@@ -318,39 +393,104 @@
         End If
 
         ' Evitar ingresar mas de dos digitos decimales'
-        If tbDescuentos3.Text.Contains(".") AndAlso Char.IsDigit(e.KeyChar) Then
-            Dim partesTexto() As String = tbDescuentos3.Text.Split(".")
+        If tbDescuento3.Text.Contains(".") AndAlso Char.IsDigit(e.KeyChar) Then
+            Dim partesTexto() As String = tbDescuento3.Text.Split(".")
             If partesTexto(1).Length = 2 Then
                 e.Handled = True
             End If
         End If
     End Sub
 
-    Private Sub Label14_Click(sender As Object, e As EventArgs) Handles Label14.Click
-
+    Private Sub cmbGenero_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbGenero.SelectedIndexChanged
+        If cmbGenero.Text = "Femenino" Then
+            tbApellidoCasada.Enabled = True
+            cmbEstadoCivil.Items.Clear()
+            cmbEstadoCivil.Items.Add("Soltera")
+            cmbEstadoCivil.Items.Add("Casada")
+            cmbEstadoCivil.Items.Add("Viuda")
+            cmbEstadoCivil.Items.Add("Divorciada")
+            cmbEstadoCivil.SelectedIndex = 0
+        Else
+            tbApellidoCasada.Enabled = False
+            cmbEstadoCivil.Items.Clear()
+            cmbEstadoCivil.Items.Add("Soltero")
+            cmbEstadoCivil.Items.Add("Casado")
+            cmbEstadoCivil.Items.Add("Viudo")
+            cmbEstadoCivil.Items.Add("Divorciado")
+            cmbEstadoCivil.SelectedIndex = 0
+        End If
+    End Sub
+    Private Sub cmbEstadoCivil_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbEstadoCivil.SelectedIndexChanged
+        If cmbGenero.Text = "Femenino" AndAlso cmbEstadoCivil.Text <> "Soltera" Then
+            tbApellidoCasada.Enabled = True
+        ElseIf cmbGenero.Text = "Femenino" AndAlso cmbEstadoCivil.Text = "Soltera" Then
+            tbApellidoCasada.Enabled = False
+        End If
     End Sub
 
-    Private Sub tbSueldoBruto_TextChanged(sender As Object, e As EventArgs) Handles tbSueldoBruto.TextChanged
 
+    Private Sub cmbTipoHorasExtra1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbTipoHorasExtra1.SelectedIndexChanged
+        If cmbTipoHorasExtra1.Text <> "" Then
+            tbHorasExtra1.Enabled = True
+        Else
+            tbHorasExtra1.Text = ""
+            tbHorasExtra1.Enabled = False
+        End If
     End Sub
 
-    Private Sub Label20_Click(sender As Object, e As EventArgs) Handles Label20.Click
-
+    Private Sub cmbTipoHorasExtra2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbTipoHorasExtra2.SelectedIndexChanged
+        If cmbTipoHorasExtra2.Text <> "" Then
+            tbHorasExtra2.Enabled = True
+        Else
+            tbHorasExtra2.Text = ""
+            tbHorasExtra2.Enabled = False
+        End If
     End Sub
 
-    Private Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs)
-
+    Private Sub cmbTipoHorasExtra3_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbTipoHorasExtra3.SelectedIndexChanged
+        If cmbTipoHorasExtra3.Text <> "" Then
+            tbHorasExtra3.Enabled = True
+        Else
+            tbHorasExtra3.Text = ""
+            tbHorasExtra3.Enabled = False
+        End If
     End Sub
 
-    Private Sub Label21_Click(sender As Object, e As EventArgs) Handles Label21.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        tbTomo.Text = ""
+        tbAsiento.Text = ""
+        cmbGenero.SelectedIndex = 0
 
-    End Sub
+        cmbEstadoCivil.Items.Clear()
+        cmbEstadoCivil.Items.Add("Soltero")
+        cmbEstadoCivil.Items.Add("Casado")
+        cmbEstadoCivil.Items.Add("Viudo")
+        cmbEstadoCivil.Items.Add("Divorciado")
+        cmbEstadoCivil.SelectedIndex = 0
 
-    Private Sub tbTomo_TextChanged(sender As Object, e As EventArgs) Handles tbTomo.TextChanged
-
-    End Sub
-
-    Private Sub cmbPrefijo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbPrefijo.SelectedIndexChanged
-
+        tbNombre1.Text = ""
+        tbNombre2.Text = ""
+        tbApellido1.Text = ""
+        tbApellido2.Text = ""
+        tbApellidoCasada.Text = ""
+        tbSalarioHora.Text = ""
+        tbHorasTrabajadas.Text = ""
+        cmbTipoHorasExtra1.SelectedIndex = 0
+        tbHorasExtra1.Text = ""
+        cmbTipoHorasExtra2.SelectedIndex = 0
+        tbHorasExtra2.Text = ""
+        cmbTipoHorasExtra3.SelectedIndex = 0
+        tbHorasExtra3.Text = ""
+        tbDescuento1.Text = ""
+        tbDescuento2.Text = ""
+        tbDescuento3.Text = ""
+        tbMontoHorasExtras1.Text = ""
+        tbMontoHorasExtras2.Text = ""
+        tbMontoHorasExtras3.Text = ""
+        tbSueldoBruto.Text = ""
+        tbSeguroSocial.Text = ""
+        tbSeguroEducativo.Text = ""
+        tbImpuestoRenta.Text = ""
+        tbSueldoNeto.Text = ""
     End Sub
 End Class
