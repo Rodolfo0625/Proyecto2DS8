@@ -187,48 +187,47 @@ Public Class Empleado
     End Sub
 
     Public Sub RegistrarDatos()
-        'Logica para registrar los datos en la base de datos
-        Dim insertar As String
-        insertar = "INSERT INTO nombre_de_tu_tabla (prefijo, tomo, asiento, genero, cedula, nombre1, nombre2, apellido1, apellido2, estado_civil, apellido_casada, usa_apellido_casada, htrabajadas, shora, thextra1, hextra1, mhextra1, thextra2, hextra2, mhextra2, thextra3, hextra3, mhextra3, sbruto, seguro_social, seguro_educativo, impuesto_renta, descuento1, descuento2, descuento3, sneto) " &
-        "VALUES (@prefijo, @tomo, @asiento, @genero, @cedula, @nombre1, @nombre2, @apellido1, @apellido2, @estado_civil, @apellido_casada, @usa_apellido_casada, @htrabajadas, @shora, @thextra1, @hextra1, @mhextra1, @thextra2, @hextra2, @mhextra2, @thextra3, @hextra3, @mhextra3, @sbruto, @seguro_social, @seguro_educativo, @impuesto_renta, @descuento1, @descuento2, @descuento3, @sneto)"
+        ' Lógica para registrar los datos en la base de datos
+        Dim insertar As String = "INSERT INTO generales (prefijo, tomo, asiento, genero, cedula, nombre1, nombre2, apellido1, apellido2, estado_civil, apellido_casada, usa_apellido_casada, htrabajadas, shora, thextra1, hextra1, mhextra1, thextra2, hextra2, mhextra2, thextra3, hextra3, mhextra3, sbruto, seguro_social, seguro_educativo, impuesto_renta, descuento1, descuento2, descuento3, sneto) " &
+    "VALUES (@prefijo, @tomo, @asiento, @genero, @cedula, @nombre1, @nombre2, @apellido1, @apellido2, @estado_civil, @apellido_casada, @usa_apellido_casada, @htrabajadas, @shora, @thextra1, @hextra1, @mhextra1, @thextra2, @hextra2, @mhextra2, @thextra3, @hextra3, @mhextra3, @sbruto, @seguro_social, @seguro_educativo, @impuesto_renta, @descuento1, @descuento2, @descuento3, @sneto)"
 
-        Using conn As New MySqlConnection("server=localhost;userid=root;database=d8")
+        Using conn As New MySqlConnection("server=localhost;userid=root;database=d8_modificado")
             Try
                 conn.Open()
 
                 Using command As New MySqlCommand(insertar, conn)
                     ' Asignar valores a los parámetros usando la instancia de Empleado
-                    command.Parameters.AddWithValue("@prefijo", prefijo)
-                    command.Parameters.AddWithValue("@tomo", tomo)
-                    command.Parameters.AddWithValue("@asiento", asiento)
-                    command.Parameters.AddWithValue("@genero", genero)
-                    command.Parameters.AddWithValue("@cedula", cedula)
-                    command.Parameters.AddWithValue("@nombre1", nombre1)
-                    command.Parameters.AddWithValue("@nombre2", nombre2)
-                    command.Parameters.AddWithValue("@apellido1", apellido1)
-                    command.Parameters.AddWithValue("@apellido2", apellido2)
-                    command.Parameters.AddWithValue("@estado_civil", estado_civil)
-                    command.Parameters.AddWithValue("@apellido_casada", apellido_casada)
-                    command.Parameters.AddWithValue("@usa_apellido_casada", usa_apellido_casada)
-                    command.Parameters.AddWithValue("@htrabajadas", htrabajadas)
-                    command.Parameters.AddWithValue("@shora", shora)
-                    command.Parameters.AddWithValue("@thextra1", thextra1)
-                    command.Parameters.AddWithValue("@hextra1", hextra1)
-                    command.Parameters.AddWithValue("@mhextra1", mhextra1)
-                    command.Parameters.AddWithValue("@thextra2", thextra2)
-                    command.Parameters.AddWithValue("@hextra2", hextra2)
-                    command.Parameters.AddWithValue("@mhextra2", mhextra2)
-                    command.Parameters.AddWithValue("@thextra3", thextra3)
-                    command.Parameters.AddWithValue("@hextra3", hextra3)
-                    command.Parameters.AddWithValue("@mhextra3", mhextra3)
-                    command.Parameters.AddWithValue("@sbruto", sbruto)
-                    command.Parameters.AddWithValue("@seguro_social", seguro_social)
-                    command.Parameters.AddWithValue("@seguro_educativo", seguro_educativo)
-                    command.Parameters.AddWithValue("@impuesto_renta", impuesto_renta)
-                    command.Parameters.AddWithValue("@descuento1", descuento1)
-                    command.Parameters.AddWithValue("@descuento2", descuento2)
-                    command.Parameters.AddWithValue("@descuento3", descuento3)
-                    command.Parameters.AddWithValue("@sneto", sneto)
+                    command.Parameters.AddWithValue("@prefijo", If(String.IsNullOrEmpty(prefijo), DBNull.Value, prefijo))
+                    command.Parameters.AddWithValue("@tomo", If(String.IsNullOrEmpty(tomo), DBNull.Value, tomo))
+                    command.Parameters.AddWithValue("@asiento", If(String.IsNullOrEmpty(asiento), DBNull.Value, asiento))
+                    command.Parameters.AddWithValue("@genero", If(String.IsNullOrEmpty(genero), DBNull.Value, genero))
+                    command.Parameters.AddWithValue("@cedula", If(String.IsNullOrEmpty(cedula), DBNull.Value, cedula))
+                    command.Parameters.AddWithValue("@nombre1", If(String.IsNullOrEmpty(nombre1), DBNull.Value, nombre1))
+                    command.Parameters.AddWithValue("@nombre2", If(String.IsNullOrEmpty(nombre2), DBNull.Value, nombre2))
+                    command.Parameters.AddWithValue("@apellido1", If(String.IsNullOrEmpty(apellido1), DBNull.Value, apellido1))
+                    command.Parameters.AddWithValue("@apellido2", If(String.IsNullOrEmpty(apellido2), DBNull.Value, apellido2))
+                    command.Parameters.AddWithValue("@estado_civil", If(String.IsNullOrEmpty(estado_civil), DBNull.Value, estado_civil))
+                    command.Parameters.AddWithValue("@apellido_casada", If(String.IsNullOrEmpty(apellido_casada), DBNull.Value, apellido_casada))
+                    command.Parameters.AddWithValue("@usa_apellido_casada", If(String.IsNullOrEmpty(usa_apellido_casada), DBNull.Value, usa_apellido_casada))
+                    command.Parameters.AddWithValue("@htrabajadas", If(htrabajadas = 0, DBNull.Value, htrabajadas))
+                    command.Parameters.AddWithValue("@shora", If(shora = 0, DBNull.Value, shora))
+                    command.Parameters.AddWithValue("@thextra1", If(String.IsNullOrEmpty(thextra1), DBNull.Value, thextra1))
+                    command.Parameters.AddWithValue("@hextra1", If(hextra1 = 0, DBNull.Value, hextra1))
+                    command.Parameters.AddWithValue("@mhextra1", If(mhextra1 = 0, DBNull.Value, mhextra1))
+                    command.Parameters.AddWithValue("@thextra2", If(String.IsNullOrEmpty(thextra2), DBNull.Value, thextra2))
+                    command.Parameters.AddWithValue("@hextra2", If(hextra2 = 0, DBNull.Value, hextra2))
+                    command.Parameters.AddWithValue("@mhextra2", If(mhextra2 = 0, DBNull.Value, mhextra2))
+                    command.Parameters.AddWithValue("@thextra3", If(String.IsNullOrEmpty(thextra3), DBNull.Value, thextra3))
+                    command.Parameters.AddWithValue("@hextra3", If(hextra3 = 0, DBNull.Value, hextra3))
+                    command.Parameters.AddWithValue("@mhextra3", If(mhextra3 = 0, DBNull.Value, mhextra3))
+                    command.Parameters.AddWithValue("@sbruto", If(sbruto = 0, DBNull.Value, sbruto))
+                    command.Parameters.AddWithValue("@seguro_social", If(seguro_social = 0, DBNull.Value, seguro_social))
+                    command.Parameters.AddWithValue("@seguro_educativo", If(seguro_educativo = 0, DBNull.Value, seguro_educativo))
+                    command.Parameters.AddWithValue("@impuesto_renta", If(impuesto_renta = 0, DBNull.Value, impuesto_renta))
+                    command.Parameters.AddWithValue("@descuento1", If(descuento1 = 0, DBNull.Value, descuento1))
+                    command.Parameters.AddWithValue("@descuento2", If(descuento2 = 0, DBNull.Value, descuento2))
+                    command.Parameters.AddWithValue("@descuento3", If(descuento3 = 0, DBNull.Value, descuento3))
+                    command.Parameters.AddWithValue("@sneto", If(sneto = 0, DBNull.Value, sneto))
 
                     ' Ejecutar la consulta
                     command.ExecuteNonQuery()

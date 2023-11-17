@@ -134,13 +134,10 @@ Public Class Form1
                 tbSueldoNeto.Text = empleado.sneto
 
                 'imprimir una lista de todos los atributos del empleado (SOLO PARA VERIFICAR)
-                empleado.ImprimirAtributos()
+                'empleado.ImprimirAtributos()
 
                 'Registrar datos del empleado
                 empleado.RegistrarDatos()
-
-
-                '...
             End If
         End If
     End Sub
